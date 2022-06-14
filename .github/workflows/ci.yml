@@ -5,7 +5,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - master  #此处填源码分支，如main、master，请结合实际。注意这里是源码分支，不是静态页面分支。我们用这个部署文件在线自动部署得到我们的静态文件。这是第一处要修改的。
+      - main  #此处填源码分支，如main、master，请结合实际。注意这里是源码分支，不是静态页面分支。我们用这个部署文件在线自动部署得到我们的静态文件。这是第一处要修改的。
 
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
@@ -31,5 +31,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
-          BRANCH: gh-pages # 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件。我这里静态放置在master，请结合项目实际修改。这是第二处要修改的。
+          BRANCH: master # 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件。我这里静态放置在master，请结合项目实际修改。这是第二处要修改的。
           FOLDER: docs/.vuepress/dist # vuepress 生成的静态文件存放的地方
