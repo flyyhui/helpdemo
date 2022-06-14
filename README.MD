@@ -1,6 +1,6 @@
 欢迎来到我的主页，请放下浮躁，细细品尝她，希望不会让你失望。
 
-1️⃣ 主地址：<https://demo.github.io/>
+1️⃣ 主地址：<https://demo.github.io/>  或 <https://https://easwiki.vercel.app/> 
 
 ## 目录页的front matter
 
